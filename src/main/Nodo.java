@@ -24,7 +24,17 @@ public class Nodo {
 		this.contenido = contenido;
 	}
 	
-	public void addNodo(Nodo nodoHijo) {
+	public void setNodoHijo(Nodo nodoHijo) {
 		this.nodosHijos.add(nodoHijo);
+	}
+	
+	public boolean tieneNodosHijos() {
+		ArrayList<Nodo> nodosHijos = new ArrayList<Nodo>();
+		nodosHijos = this.getNodosHijos();
+		if(nodosHijos.size() > 0) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }
